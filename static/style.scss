@@ -1,0 +1,521 @@
+$title-bg: #B2DFFB;
+$footer-bg: #D7F0FF;
+$footer-bg: #D7F0FF;
+$footer-stroke: #DBDBDB;
+$text: #002B4A;
+$text-black: #00012f;
+$content-bg: #A1D0EE;
+$content: #F8FEFF;
+$link: #005288;
+$circle-scale: #56748A;
+$inner-circle-scale: #ECF6FF;
+$frame-shadow: #879dac;
+
+* {
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    border: 0 none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+}
+  
+
+body{
+    overflow: hidden;
+    min-width: 800px;
+}
+
+
+.wrapper{
+    &-title{
+        width: 100%;
+        position: relative;
+        background-color: $title-bg;
+    }
+    &-about{
+        width: 100%;
+        position: relative;
+        background-color: $title-bg;
+    }
+    &-footer{
+        position: absolute;
+        bottom: 0;
+        background-color:$footer-bg;
+        width: 100%;
+    }
+}
+
+.background{
+    position: absolute;
+    width: 100%;
+    object-fit: contain;
+    top: 0;
+    left: 0;
+}
+
+.simple-text{
+    margin-left: 5%;
+    margin-top: 2%;
+    font-family: DM Serif Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    line-height: 140%;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.25);
+    color: $text-black;
+}
+
+.title{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    height: 1100px;
+    position: absolute;
+    background-color: $title-bg;
+}
+
+.about{
+    transition: 1s ease-in;
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+    height: 0;
+    overflow: hidden;
+    background-image: url('img/about/bg.svg');
+    background-color: $content-bg;
+    box-shadow: 5px 0px 100px $frame-shadow;
+    &-content{
+        margin: 65px auto;
+        padding: 30px;
+        height: 76%;
+        max-width: 1200px;
+        background-color: $content;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
+    }
+    &-text{        
+        margin-left: 5%;
+        margin-top: 2%;
+        font-family: DM Serif Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 27px;
+        letter-spacing: 0.01em;
+        line-height: 140%;
+        text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.25);
+        color: $text-black;
+    }
+}
+
+.who{
+    display: flex;
+    justify-content: start;
+    max-width: 95%;
+    margin: 0 auto;
+    &-link{
+        text-decoration: none;
+        color: $link;
+    }
+}
+
+.hobbies{
+    display: flex;
+    justify-content: space-between;
+    max-width: 95%;
+    margin: 0 auto;
+    &-basket{
+        margin-top: 12%;        
+    }
+    &-text{
+        max-width: 46%;
+        margin: 0 auto; 
+    }
+    &-ball{
+        margin-bottom: 11%;
+    }
+}
+
+.skills{
+    transition: 1s ease-in;
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+    height: 0;
+    overflow: hidden;
+    background-image: url('img/skills/bg.svg');
+    background-color: $content-bg;
+    box-shadow: 5px 0px 100px $frame-shadow;
+    &-content{
+        margin: 65px auto;
+        padding: 30px;
+        height: 70%;
+        max-width: 1200px;
+        background-color: $content;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
+    }
+    &-scales{
+        max-width: 78%;
+        margin: 60px auto;
+    }
+    &-button{
+        display: flex;
+        justify-content: space-between;
+        max-width: 7%;
+        margin-left: 91%;
+    }
+    &-more{
+        position: absolute;
+        width: 350px;
+        height: 68%;
+        top: 115px;
+        right: 150px;
+        z-index: -1;
+        background-color: $content;
+    }
+    &-picture{
+        transform: scale(-1,1);
+        margin: 35px;
+    }
+}
+
+.projects{
+    transition: 1s ease-in;
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+    height: 0;
+    overflow: hidden;
+    background-image: url('img/projects/bg.svg');
+    background-color: $content-bg;
+    box-shadow: 5px 0px 100px $frame-shadow;
+    &-content{
+        margin: 65px auto;
+        padding: 30px;
+        height: 70%;
+        max-width: 1200px;
+        background-color: $content;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
+    }
+
+}
+
+.contacts{
+    transition: 1s ease-in;
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+    height: 0;
+    overflow: hidden;
+    background-image: url('img/contacts/bg.svg');
+    background-color: $content-bg;
+    box-shadow: 5px 0px 100px $frame-shadow;
+    &-wrapper{
+        max-width: 750px;
+        margin: 0 auto;
+        margin-top: 260px;
+    }
+    &-phone{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    &-soc{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0 20px 0;
+        margin-top: 5%;
+    }
+}
+
+.elem{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    background-color: $content;
+    border-radius: 2px;
+    box-shadow: 0.5px 0.5px 3px rgb(158, 158, 158);
+    transition: 0.15s ease-out;
+    &-img{
+        max-width: 50px;
+        max-height: 50px;
+        margin: auto auto;
+    }
+}
+
+.elem:hover{
+    border-radius: 20%;
+    box-shadow: 1px 1px 6px rgb(136, 136, 136);
+}
+
+.owncard{
+    width: 310px;
+    height: 590px;
+    background-color: #F1F5F3;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+    &-title{    
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+        margin-top: 6%;
+    }
+    &-circle{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: linear-gradient(136.85deg, rgba(0, 161, 231, 0.6) 15.9%, rgba(37, 3, 135, 0.6) 71.31%);
+        box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+        margin: auto;
+    }
+    &-body{
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 8%;
+    }
+    &-contact{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-top: 14%;
+        max-width: 90%;
+    }
+    &-telegram{
+        width: 100px;
+        height: 55px;
+        display: flex;
+        margin: auto;
+        border-radius: 30px;
+        background-color: #0088CC;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+        transition: 0.4s;
+    }
+    &-github{
+        width: 100px;
+        height: 55px;
+        display: flex;
+        margin: auto;
+        border-radius: 30px;
+        background-color: #6E5494;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+        transition: 0.4s;
+    }
+    &-github:hover{
+        transform: scale(1.05);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+    &-telegram:hover{
+        transform: scale(1.05);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.owl-carousel{
+    z-index: 0 !important;
+}
+
+.owl-stage-outer{
+    overflow: visible !important;
+}
+
+.owl-nav{
+    position: absolute;
+    overflow: visible;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 103.2%;
+}
+
+.owl-prev{
+    position: absolute;
+    left: 0;
+    display: block;
+}
+
+.owl-nav .owl-next{
+    position: absolute;
+    right: 0;
+    display: block;
+}
+
+.circle{
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    transform: scale(-1,1);
+    &-js{
+        --value: 15%;
+        background: conic-gradient($circle-scale var(--value), transparent 0);
+    }
+    &-html{
+        --value: 70%;
+        background: conic-gradient($circle-scale var(--value), transparent 0);
+    }
+    &-css{
+        --value: 45%;
+        background: conic-gradient($circle-scale var(--value), transparent 0);
+    }
+    &-python{
+        --value: 37%;
+        background: conic-gradient($circle-scale var(--value), transparent 0);
+    }
+    &-django{
+        --value: 15%;
+        background: conic-gradient($circle-scale var(--value), transparent 0);
+    }
+    &-inner{
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        margin: 12.5px;
+        background-color: $inner-circle-scale;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.line{
+    &-1{
+        display: flex;
+        justify-content: space-between
+    }
+    &-2{
+        display: flex;
+        justify-content: space-around;
+        margin: 100px 0px auto auto;
+    }
+}
+
+.goup{
+    transition: 1s;
+    bottom: 100%;
+    height: 0;
+}
+
+.godown{
+    transition: 1s;
+    bottom: 0%;
+    height: 100%;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    max-width: 666px;
+    margin: 0 auto;
+    padding: 32px;
+    border-top: 2px $footer-stroke;
+    h3{
+        font-family: DM Serif Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 36px;
+        color: #002B4A;
+        cursor: pointer;
+    }
+}
+
+
+//animations
+
+.ober{
+    width: 330px;
+    height: 110px;
+    perspective: 500px;
+}
+
+
+.cube{
+    width: inherit;
+    height: inherit;
+    transform-style: preserve-3d;
+    transform: rotateX(0);
+    transition: 0.25s ease-out;
+}
+
+.front, .bottom{
+    position: absolute;
+    display: flex;
+    width: inherit;
+    height: inherit;
+    background-color: $content;
+    text-align: center;
+    border: 1px solid $content;
+    border-radius: 2px;
+}
+
+.content{
+    margin: auto auto;
+}
+
+.front img{
+    width: 40px;
+    height: 40px;
+}
+
+.front{
+    transform: translateZ(55px);
+}
+
+.bottom{
+    transform: rotateX(-90deg) translateZ(55px);
+}
+
+.cube:hover{
+    transform: rotateX(90deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// snow anim
+
+// html,body{height: 100%}
+
+// body {
+//     background: url(home.jpg) no-repeat;
+//     background-size: cover;
+// }
+
+// @keyframes snow {
+//     0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+//     100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+// }
+
+// #snow-container {
+//     background-image: url(snowflake.png), url(snowflake3.png), url(snowflake2.png);
+//     height: 100%;
+//     animation: snow 20s linear infinite;
+// }
