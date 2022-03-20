@@ -4,6 +4,12 @@ let message = 'Hey! I see you are interesting who i am. Try to scroll down.';
 let structure = ['main', 'about', 'skills', 'projects', 'contacts']
 let curent_slide = 'main'
 
+let wheelblock = false
+
+function blocker(arg){
+  wheelblock = arg;
+}
+
 $(function() {
     // Owl Carousel
     var owl = $(".owl-carousel");
@@ -16,6 +22,28 @@ $(function() {
       dots: false,
     });
   });
+
+$(document).ready(function () {
+  $(window).on('wheel', function(e){
+    if(wheelblock == false){
+      if(e.originalEvent.deltaY > 0){
+        if(curent_slide != 'contacts'){
+          blocker(true)
+          lift(structure[(structure.indexOf(curent_slide)+1)]);
+          setTimeout(blocker, 900, false)
+        }
+      }else{
+        if(curent_slide != 'main'){
+          blocker(true)
+          lift(structure[(structure.indexOf(curent_slide)-1)]);
+          setTimeout(blocker, 900, false)
+        }
+      }
+    }
+  });
+})
+
+
 
 function text(){
   if(i < message.length){
@@ -37,7 +65,6 @@ function lift(id_of_element){
   }
   else{
     tor = structure.slice((structure.indexOf(curent_slide)+1),(structure.indexOf(id_of_element)+1));
-    console.log(tor)
     for(i in tor){
       down(tor[i]);
     }
@@ -47,13 +74,11 @@ function lift(id_of_element){
 
 function down(id_of_element){
   document.getElementById(id_of_element).classList.add('godown');
-  console.log('DOWN' + id_of_element);
 }
 
 function up(id_of_element){
   document.getElementById(id_of_element).classList.remove('godown');
   document.getElementById(id_of_element).classList.add('goup');
-  console.log('UP' + id_of_element);
 }
 
 function copy(text){
