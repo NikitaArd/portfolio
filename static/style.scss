@@ -93,7 +93,8 @@ body{
     &-content{
         margin: 65px auto;
         padding: 30px;
-        height: 76%;
+        height: 710px;
+        max-height: 710px;
         max-width: 1200px;
         background-color: $content;
         border-radius: 20px;
@@ -156,7 +157,8 @@ body{
     &-content{
         margin: 65px auto;
         padding: 30px;
-        height: 70%;
+        height: 656px;
+        max-height: 656px;
         max-width: 1200px;
         background-color: $content;
         border-radius: 20px;
@@ -201,7 +203,8 @@ body{
     &-content{
         margin: 65px auto;
         padding: 30px;
-        height: 70%;
+        height: 656px;
+        max-height: 656px;
         max-width: 1200px;
         background-color: $content;
         border-radius: 20px;

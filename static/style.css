@@ -87,7 +87,8 @@ body {
 .about-content {
   margin: 65px auto;
   padding: 30px;
-  height: 76%;
+  height: 710px;
+  max-height: 710px;
   max-width: 1200px;
   background-color: #F8FEFF;
   border-radius: 20px;
@@ -167,7 +168,8 @@ body {
 .skills-content {
   margin: 65px auto;
   padding: 30px;
-  height: 70%;
+  height: 656px;
+  max-height: 656px;
   max-width: 1200px;
   background-color: #F8FEFF;
   border-radius: 20px;
@@ -225,7 +227,8 @@ body {
 .projects-content {
   margin: 65px auto;
   padding: 30px;
-  height: 70%;
+  height: 656px;
+  max-height: 656px;
   max-width: 1200px;
   background-color: #F8FEFF;
   border-radius: 20px;
