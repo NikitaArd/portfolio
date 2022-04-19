@@ -22,34 +22,50 @@ $frame-shadow: #879dac;
     padding: 0;
     margin: 0;
 }
-  
 
-body{
+
+body {
     overflow: hidden;
     min-width: 800px;
 }
 
+.none{
+    display: none !important;
+}
 
-.wrapper{
-    &-title{
+.opacity-1{
+    transition: opacity 500ms;
+    opacity: 1;
+}
+
+.opacity-0{
+    transition: opacity 500ms;
+    opacity: 0;
+    
+}
+
+.wrapper {
+    &-title {
         width: 100%;
         position: relative;
         background-color: $title-bg;
     }
-    &-about{
+
+    &-about {
         width: 100%;
         position: relative;
         background-color: $title-bg;
     }
-    &-footer{
+
+    &-footer {
         position: absolute;
         bottom: 0;
-        background-color:$footer-bg;
+        background-color: $footer-bg;
         width: 100%;
     }
 }
 
-.background{
+.background {
     position: absolute;
     width: 100%;
     object-fit: contain;
@@ -57,7 +73,7 @@ body{
     left: 0;
 }
 
-.simple-text{
+.simple-text {
     margin-left: 5%;
     margin-top: 2%;
     font-family: DM Serif Display;
@@ -71,7 +87,7 @@ body{
     color: $text-black;
 }
 
-.title{
+.title {
     display: flex;
     justify-content: start;
     width: 100%;
@@ -80,7 +96,7 @@ body{
     background-color: $title-bg;
 }
 
-.about{
+.about {
     transition: 1s ease-in;
     position: absolute;
     width: 100%;
@@ -90,7 +106,8 @@ body{
     background-image: url('img/about/bg.svg');
     background-color: $content-bg;
     box-shadow: 5px 0px 100px $frame-shadow;
-    &-content{
+
+    &-content {
         margin: 65px auto;
         padding: 30px;
         height: 710px;
@@ -101,7 +118,8 @@ body{
         overflow: hidden;
         box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
     }
-    &-text{        
+
+    &-text {
         margin-left: 5%;
         margin-top: 2%;
         font-family: DM Serif Display;
@@ -116,35 +134,39 @@ body{
     }
 }
 
-.who{
+.who {
     display: flex;
     justify-content: start;
     max-width: 95%;
     margin: 0 auto;
-    &-link{
+
+    &-link {
         text-decoration: none;
         color: $link;
     }
 }
 
-.hobbies{
+.hobbies {
     display: flex;
     justify-content: space-between;
     max-width: 95%;
     margin: 0 auto;
-    &-basket{
-        margin-top: 12%;        
+
+    &-basket {
+        margin-top: 12%;
     }
-    &-text{
+
+    &-text {
         max-width: 46%;
-        margin: 0 auto; 
+        margin: 0 auto;
     }
-    &-ball{
+
+    &-ball {
         margin-bottom: 11%;
     }
 }
 
-.skills{
+.skills {
     transition: 1s ease-in;
     position: absolute;
     width: 100%;
@@ -154,7 +176,9 @@ body{
     background-image: url('img/skills/bg.svg');
     background-color: $content-bg;
     box-shadow: 5px 0px 100px $frame-shadow;
-    &-content{
+
+    &-content {
+        position: relative;
         margin: 65px auto;
         padding: 30px;
         height: 656px;
@@ -165,17 +189,24 @@ body{
         overflow: hidden;
         box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
     }
-    &-scales{
-        max-width: 78%;
-        margin: 60px auto;
+
+    &-scales {
+        position: absolute;
+        width: 78%;
+        left: 50%;
+        margin-top: 60px;
+        margin-left: -39%;
     }
-    &-button{
-        display: flex;
-        justify-content: space-between;
-        max-width: 7%;
-        margin-left: 91%;
+
+    &-button {
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        left: 43%;
+        top: 88%
     }
-    &-more{
+
+    &-more {
         position: absolute;
         width: 350px;
         height: 68%;
@@ -184,13 +215,84 @@ body{
         z-index: -1;
         background-color: $content;
     }
-    &-picture{
-        transform: scale(-1,1);
+
+    &-picture {
+        transform: scale(-1, 1);
         margin: 35px;
+    }
+
+    &-wrapper {
+        position: absolute;
     }
 }
 
-.projects{
+.skills-other {
+    display: flex;
+    position: absolute;
+    position: absolute;
+    width: 95%;
+    height: 88%;
+    font-size: 40px;
+    color: rgba(41, 53, 68, 0.87);
+    font-family: 'DM Serif Display', serif;
+
+    &-name {
+        margin: 0 auto;
+        position: absolute;
+        opacity: 0;
+        background-image: linear-gradient(0.25turn, rgb(72, 106, 136), rgb(72, 106, 136));
+        background-repeat: no-repeat;
+        background-size: 0% 10%;
+        background-position-x: right;
+        background-position-y: bottom;
+        transition: background-size 300ms;
+        cursor: default;
+    }
+
+    &-name:hover {
+        background-size: 100% 10%;
+        background-position-x: left;
+    }
+}
+
+#git {
+    left: 12%;
+    top: 15%;
+}
+
+#sass {
+    left: 45%;
+    top: 30%;
+}
+
+#sqlite {
+    left: 80%;
+    top: 78%;
+}
+
+#jup {
+    left: 15%;
+    top: 75%;
+}
+
+#figma {
+    left: 75%;
+    top: 20%;
+}
+
+#linux {
+    left: 23%;
+    top: 48%;
+}
+
+#bootstrap {
+    left: 55%;
+    top: 60%;
+}
+
+
+
+.projects {
     transition: 1s ease-in;
     position: absolute;
     width: 100%;
@@ -200,7 +302,8 @@ body{
     background-image: url('img/projects/bg.svg');
     background-color: $content-bg;
     box-shadow: 5px 0px 100px $frame-shadow;
-    &-content{
+
+    &-content {
         margin: 65px auto;
         padding: 30px;
         height: 656px;
@@ -214,7 +317,7 @@ body{
 
 }
 
-.contacts{
+.contacts {
     transition: 1s ease-in;
     position: absolute;
     width: 100%;
@@ -224,17 +327,20 @@ body{
     background-image: url('img/contacts/bg.svg');
     background-color: $content-bg;
     box-shadow: 5px 0px 100px $frame-shadow;
-    &-wrapper{
+
+    &-wrapper {
         max-width: 750px;
         margin: 0 auto;
         margin-top: 260px;
     }
-    &-phone{
+
+    &-phone {
         display: flex;
         justify-content: space-between;
-        
+
     }
-    &-soc{
+
+    &-soc {
         display: flex;
         justify-content: space-between;
         padding: 20px 0 20px 0;
@@ -242,7 +348,7 @@ body{
     }
 }
 
-.elem{
+.elem {
     width: 70px;
     height: 70px;
     display: flex;
@@ -250,19 +356,20 @@ body{
     border-radius: 2px;
     box-shadow: 0.5px 0.5px 3px rgb(158, 158, 158);
     transition: 0.15s ease-out;
-    &-img{
+
+    &-img {
         max-width: 50px;
         max-height: 50px;
         margin: auto auto;
     }
 }
 
-.elem:hover{
+.elem:hover {
     border-radius: 20%;
     box-shadow: 1px 1px 6px rgb(136, 136, 136);
 }
 
-.owncard{
+.owncard {
     width: 310px;
     height: 590px;
     background-color: #F1F5F3;
@@ -270,13 +377,15 @@ body{
     border-radius: 20px;
     margin: 0 auto;
     overflow: hidden;
-    &-title{    
+
+    &-title {
         display: flex;
         justify-content: space-around;
         margin: 0 auto;
         margin-top: 6%;
     }
-    &-circle{
+
+    &-circle {
         width: 15px;
         height: 15px;
         border-radius: 50%;
@@ -284,20 +393,23 @@ body{
         box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
         margin: auto;
     }
-    &-body{
+
+    &-body {
         width: 85%;
         margin: 0 auto;
         margin-top: 8%;
         min-height: 140px;
     }
-    &-contact{
+
+    &-contact {
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
         margin-top: 14%;
         max-width: 90%;
     }
-    &-telegram{
+
+    &-telegram {
         width: 100px;
         height: 55px;
         display: flex;
@@ -307,7 +419,8 @@ body{
         box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
         transition: 0.4s;
     }
-    &-github{
+
+    &-github {
         width: 100px;
         height: 55px;
         display: flex;
@@ -317,25 +430,27 @@ body{
         box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
         transition: 0.4s;
     }
-    &-github:hover{
+
+    &-github:hover {
         transform: scale(1.05);
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
     }
-    &-telegram:hover{
+
+    &-telegram:hover {
         transform: scale(1.05);
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
     }
 }
 
-.owl-carousel{
+.owl-carousel {
     z-index: 0 !important;
 }
 
-.owl-stage-outer{
+.owl-stage-outer {
     overflow: visible !important;
 }
 
-.owl-nav{
+.owl-nav {
     position: absolute;
     overflow: visible;
     top: 50%;
@@ -344,44 +459,50 @@ body{
     width: 103.2%;
 }
 
-.owl-prev{
+.owl-prev {
     position: absolute;
     left: 0;
     display: block;
 }
 
-.owl-nav .owl-next{
+.owl-nav .owl-next {
     position: absolute;
     right: 0;
     display: block;
 }
 
-.circle{
+.circle {
     width: 155px;
     height: 155px;
     border-radius: 50%;
-    transform: scale(-1,1);
-    &-js{
+    transform: scale(-1, 1);
+
+    &-js {
         --value: 15%;
         background: conic-gradient($circle-scale var(--value), transparent 0);
     }
-    &-html{
+
+    &-html {
         --value: 70%;
         background: conic-gradient($circle-scale var(--value), transparent 0);
     }
-    &-css{
+
+    &-css {
         --value: 45%;
         background: conic-gradient($circle-scale var(--value), transparent 0);
     }
-    &-python{
+
+    &-python {
         --value: 37%;
         background: conic-gradient($circle-scale var(--value), transparent 0);
     }
-    &-django{
+
+    &-django {
         --value: 15%;
         background: conic-gradient($circle-scale var(--value), transparent 0);
     }
-    &-inner{
+
+    &-inner {
         position: absolute;
         width: 130px;
         height: 130px;
@@ -392,38 +513,40 @@ body{
     }
 }
 
-.line{
-    &-1{
+.line {
+    &-1 {
         display: flex;
         justify-content: space-between
     }
-    &-2{
+
+    &-2 {
         display: flex;
         justify-content: space-around;
         margin: 100px 0px auto auto;
     }
 }
 
-.goup{
+.goup {
     transition: 1s;
     bottom: 100%;
     height: 0;
 }
 
-.godown{
+.godown {
     transition: 1s;
     bottom: 0%;
     height: 100%;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: space-between;
     max-width: 666px;
     margin: 0 auto;
     padding: 32px;
     border-top: 2px $footer-stroke;
-    h3{
+
+    h3 {
         font-family: DM Serif Display;
         font-style: normal;
         font-weight: normal;
@@ -437,14 +560,14 @@ footer{
 
 //animations
 
-.ober{
+.ober {
     width: 330px;
     height: 110px;
     perspective: 500px;
 }
 
 
-.cube{
+.cube {
     width: inherit;
     height: inherit;
     transform-style: preserve-3d;
@@ -452,7 +575,8 @@ footer{
     transition: 0.25s ease-out;
 }
 
-.front, .bottom{
+.front,
+.bottom {
     position: absolute;
     display: flex;
     width: inherit;
@@ -463,28 +587,41 @@ footer{
     border-radius: 2px;
 }
 
-.content{
+.content {
     margin: auto auto;
 }
 
-.front img{
+.front img {
     width: 40px;
     height: 40px;
 }
 
-.front{
+.front {
     transform: translateZ(55px);
 }
 
-.bottom{
+.bottom {
     transform: rotateX(-90deg) translateZ(55px);
 }
 
-.cube:hover{
+.cube:hover {
     transform: rotateX(90deg);
 }
 
+@keyframes more {
+    0% {
+        opacity: 1;
+    }
 
+    99% {
+        opacity: 0.1;
+    }
+
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
 
 
 

@@ -15,6 +15,22 @@ body {
   min-width: 800px;
 }
 
+.none {
+  display: none !important;
+}
+
+.opacity-1 {
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  opacity: 1;
+}
+
+.opacity-0 {
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  opacity: 0;
+}
+
 .wrapper-title {
   width: 100%;
   position: relative;
@@ -166,6 +182,7 @@ body {
 }
 
 .skills-content {
+  position: relative;
   margin: 65px auto;
   padding: 30px;
   height: 656px;
@@ -179,19 +196,19 @@ body {
 }
 
 .skills-scales {
-  max-width: 78%;
-  margin: 60px auto;
+  position: absolute;
+  width: 78%;
+  left: 50%;
+  margin-top: 60px;
+  margin-left: -39%;
 }
 
 .skills-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  max-width: 7%;
-  margin-left: 91%;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  left: 43%;
+  top: 88%;
 }
 
 .skills-more {
@@ -208,6 +225,78 @@ body {
   -webkit-transform: scale(-1, 1);
           transform: scale(-1, 1);
   margin: 35px;
+}
+
+.skills-wrapper {
+  position: absolute;
+}
+
+.skills-other {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  position: absolute;
+  width: 95%;
+  height: 88%;
+  font-size: 40px;
+  color: rgba(41, 53, 68, 0.87);
+  font-family: 'DM Serif Display', serif;
+}
+
+.skills-other-name {
+  margin: 0 auto;
+  position: absolute;
+  opacity: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#486a88), to(#486a88));
+  background-image: linear-gradient(0.25turn, #486a88, #486a88);
+  background-repeat: no-repeat;
+  background-size: 0% 10%;
+  background-position-x: right;
+  background-position-y: bottom;
+  -webkit-transition: background-size 300ms;
+  transition: background-size 300ms;
+  cursor: default;
+}
+
+.skills-other-name:hover {
+  background-size: 100% 10%;
+  background-position-x: left;
+}
+
+#git {
+  left: 12%;
+  top: 15%;
+}
+
+#sass {
+  left: 45%;
+  top: 30%;
+}
+
+#sqlite {
+  left: 80%;
+  top: 78%;
+}
+
+#jup {
+  left: 15%;
+  top: 75%;
+}
+
+#figma {
+  left: 75%;
+  top: 20%;
+}
+
+#linux {
+  left: 23%;
+  top: 48%;
+}
+
+#bootstrap {
+  left: 55%;
+  top: 60%;
 }
 
 .projects {
@@ -544,7 +633,8 @@ footer h3 {
   transition: 0.25s ease-out;
 }
 
-.front, .bottom {
+.front,
+.bottom {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -579,5 +669,31 @@ footer h3 {
 .cube:hover {
   -webkit-transform: rotateX(90deg);
           transform: rotateX(90deg);
+}
+
+@-webkit-keyframes more {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0.1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@keyframes more {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0.1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
